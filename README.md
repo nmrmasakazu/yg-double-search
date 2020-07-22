@@ -1,2 +1,2 @@
 # yg-double-search
-<img src="/img/yj-double-search.png"/> 
+<img src="yj-double-search.png"/> 
