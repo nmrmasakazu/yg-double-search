@@ -23,3 +23,26 @@ body
     width: 50%;
     border: 0;
 }
+
+/* Vertical Mode */
+/* #left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border: 0;
+    margin-left: -70px;
+}
+
+#right
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border: 0;
+    margin-left: 200px;
+} */
