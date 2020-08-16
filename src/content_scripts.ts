@@ -20,7 +20,6 @@ $(document).ready(function () {
     }
 
     $("#left").attr("src", left + query);
-    console.log(left + query)
     $("#right").attr("src", right + query);
 
 });
