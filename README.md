@@ -1,6 +1,6 @@
 # yg-double-search
 
-Google Extentsion for searching with Yahoo! JAPAN and Google simultaneously.
+Google Extension for searching with Yahoo! JAPAN, and Google simultaneously.
 
 ## Preparations
 
