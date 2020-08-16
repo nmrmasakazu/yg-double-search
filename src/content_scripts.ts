@@ -10,7 +10,7 @@
 import $ from 'jquery';
 
 $(document).ready(function () {
-    const left = "https://search.yahoo.co.jp/search?p=";
+    const left = "https://search.yahoo.co.jp/search?ei=UTF-8&p=";
     const right = "https://www.google.com/search?q=";
 
     let query = location.href.split("index.html?")[1].split("q=")[1]
@@ -20,6 +20,7 @@ $(document).ready(function () {
     }
 
     $("#left").attr("src", left + query);
+    console.log(left + query)
     $("#right").attr("src", right + query);
 
 });

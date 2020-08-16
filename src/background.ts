@@ -33,7 +33,6 @@ function navigate(url: string) {
 chrome.webRequest.onBeforeRequest.addListener(
     function(details)
     { 
-        console.log("DEBUG!!")
         // 適切なパラメータかチェック
         if (details.url.indexOf("https://example.com?q=") != -1
             || details.url.indexOf("chrome-extension://" + chrome.runtime.id + "/?q=") != -1) {
