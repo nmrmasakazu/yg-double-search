@@ -1,0 +1,47 @@
+{
+  "name": "yj-double-search",
+  "manifest_version": 2,
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon_32.png"
+  },
+  "background": {
+    "scripts": [
+      "jquery-3.5.1.min.js", "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content_scripts.js"
+      ]
+    }
+  ],
+  "chrome_settings_overrides": {
+    "search_provider": {
+      "encoding": "UTF-8",
+      "favicon_url": "https://example.com",
+      "is_default": true,
+      "keyword": "ds",
+      "name": "yj-double-search",
+      "search_url": "https://example.com?q={searchTerms}"
+    }
+  },
+  "omnibox": {
+    "keyword": "ds"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+    ],
+  "icons": {
+    "32": "icon_32.png"
+  },
+  "web_accessible_resources": [
+    "index.html"
+  ]
+}

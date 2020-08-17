@@ -1,0 +1,49 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+#left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    border: 0;
+}
+
+#right
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 50%;
+    border: 0;
+    scroll-margin-left: 70px;
+}
+
+/* Vertical Mode */
+/* #left
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border: 0;
+    margin-left: -70px;
+}
+
+#right
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 50%;
+    width: 100%;
+    border: 0;
+    margin-left: 200px;
+} */
