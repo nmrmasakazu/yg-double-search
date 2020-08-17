@@ -21,7 +21,7 @@ yarn webpack
 
 Ex.) You can search 台風 with Yahoo! JAPAN and Google to compare UX.
 
-<img src="yj-double-search.png"/> 
+<img src="yg-double-search.png"/> 
 
 ## Tips
 
