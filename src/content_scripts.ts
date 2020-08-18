@@ -19,6 +19,11 @@ $(document).ready(function () {
         query = ""
     }
 
+    const head_title = document.getElementById("head-title");
+    if (head_title) {
+        head_title.innerHTML = `yg - ${decodeURIComponent(query)}`
+    }
+
     $("#left").attr("src", left + query);
     $("#right").attr("src", right + query);
 

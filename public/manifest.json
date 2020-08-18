@@ -1,5 +1,5 @@
 {
-  "name": "yj-double-search",
+  "name": "yg-double-search",
   "manifest_version": 2,
   "version": "1.0",
   "browser_action": {
@@ -26,7 +26,7 @@
       "favicon_url": "https://example.com",
       "is_default": true,
       "keyword": "ds",
-      "name": "yj-double-search",
+      "name": "yg-double-search",
       "search_url": "https://example.com?q={searchTerms}"
     }
   },
