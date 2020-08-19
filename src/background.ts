@@ -47,3 +47,26 @@ chrome.webRequest.onBeforeRequest.addListener(
     {urls: ["<all_urls>"]},
     ["blocking"]
 );
+
+chrome.webRequest.onBeforeSendHeaders.addListener(
+    function (details) {
+      let headers = details.requestHeaders;
+    //   headers!.forEach(header => {
+    //     if (header.name.toLowerCase() === 'user-agent') {
+    //       header.value = 'my device';
+    //     }
+    //   });
+      headers!.push({ name: 'Set-Cookie', value: 'HttpOnly;Secure;SameSite=Strict' });
+      return { requestHeaders: headers };
+    }, {
+      urls: [
+        "*"
+      ],
+      types: [
+        "xmlhttprequest"
+      ]
+    }, [
+      "blocking",
+      "requestHeaders"
+    ]
+  );
