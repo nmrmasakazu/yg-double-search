@@ -18,19 +18,13 @@ interface queryParamsInterface {
 
 $(document).ready(function () {
 
-    console.log(location.href)
-
-    // const left = location.href.split(`${encodeURI("<left>")}`)[1].split(`${encodeURI("</left>")}`)[0]
-    // const right = location.href.split(`${encodeURI("<right>")}`)[1].split(`${encodeURI("</right>")}`)[0]
-    // let query = location.href.split(`${encodeURI("<query>")}`)[1].split(`${encodeURI("</query>")}`)[0]
-
     const queryParams = {} as queryParamsInterface
     const pairs = location.search.substring(1).split('&&');
     for(let i=0; pairs[i]; i++) {
         var keyValues = pairs[i].split('==');
         queryParams[keyValues[0]] = keyValues[1];
     }
-    console.log(queryParams)
+    
     const head_title = document.getElementById("head-title");
     if (head_title) {
         head_title.innerHTML = `yg - ${decodeURIComponent(queryParams.query)}`
