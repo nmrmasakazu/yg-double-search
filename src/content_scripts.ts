@@ -13,7 +13,7 @@ $(document).ready(function () {
     const left = "https://search.yahoo.co.jp/search?ei=UTF-8&p=";
     const right = "https://www.google.com/search?q=";
 
-    let query = location.href.split("index.html?")[1].split("q=")[1]
+    let query = location.href?.split("index.html?")[1]?.split("q=")[1]
 
     if (query === undefined) {
         query = ""
