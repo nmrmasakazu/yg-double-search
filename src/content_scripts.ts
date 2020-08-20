@@ -9,22 +9,34 @@
  */
 import $ from 'jquery';
 
+/**
+ * クエリパラメータをメンバ変数とするオブジェクトの生成
+ */
+interface queryParamsInterface {
+    [key: string]: string;
+}
+
 $(document).ready(function () {
-    const left = "https://search.yahoo.co.jp/search?ei=UTF-8&p=";
-    const right = "https://www.google.com/search?q=";
 
-    let query = location.href?.split("index.html?")[1]?.split("q=")[1]
+    console.log(location.href)
 
-    if (query === undefined) {
-        query = ""
+    // const left = location.href.split(`${encodeURI("<left>")}`)[1].split(`${encodeURI("</left>")}`)[0]
+    // const right = location.href.split(`${encodeURI("<right>")}`)[1].split(`${encodeURI("</right>")}`)[0]
+    // let query = location.href.split(`${encodeURI("<query>")}`)[1].split(`${encodeURI("</query>")}`)[0]
+
+    const queryParams = {} as queryParamsInterface
+    const pairs = location.search.substring(1).split('&&');
+    for(let i=0; pairs[i]; i++) {
+        var keyValues = pairs[i].split('==');
+        queryParams[keyValues[0]] = keyValues[1];
     }
-
+    console.log(queryParams)
     const head_title = document.getElementById("head-title");
     if (head_title) {
-        head_title.innerHTML = `yg - ${decodeURIComponent(query)}`
+        head_title.innerHTML = `yg - ${decodeURIComponent(queryParams.query)}`
     }
 
-    $("#left").attr("src", left + query);
-    $("#right").attr("src", right + query);
+    $("#left").attr("src", queryParams.left + queryParams.query);
+    $("#right").attr("src", queryParams.right + queryParams.query);
 
 });
